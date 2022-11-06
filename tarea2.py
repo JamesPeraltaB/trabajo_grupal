@@ -195,7 +195,7 @@ def formar_pichu():
             data = response.json()        
             if len(data['forms']) >= 2:
                 for item in data['forms']:
-                    print(data['name'], item)
+                    print(data['name'])
                 
 #FORM UNOWN
 def formar_unown():

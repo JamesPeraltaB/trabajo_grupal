@@ -498,8 +498,25 @@ while True:
     if opc =="3":
         
         url_api_3 = "https://pokeapi.co/api/v2/ability/"
-
+        
         import requests
+
+        d = [
+                ["stench               ", "sturdy"],
+                ["drizzle              ", "damp"],
+                ["speed-boost          ", "limber"],
+                ["battle-armor         ", "sand-veil"],
+                ["static               ", "volt-absorb"],
+                ["water-absorb         ", "oblivious"],
+                ["intimidate           ", "trace"]      
+            ]
+     
+        print ("{:<8} {:<30}".format('Habilidades','de Pokemon a Elegir'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<8} {:<30}".format( col1, col2))
+
 
         def habilidades_0(ability_name):
             response = requests.get(url_api_3+ ability_name)
@@ -516,15 +533,32 @@ while True:
         opcion_3 = input('Ingresa la habilidad del pokemon a listar: ')
         if str(opcion_3) == "stench":
             habilidades_0("stench")
-        if str(opcion_3) == "drizzle":
+        elif str(opcion_3) == "drizzle":
             habilidades_0("drizzle")
-        if str(opcion_3) == "speed-boost":
+        elif str(opcion_3) == "speed-boost":
             habilidades_0("speed-boost")
-        if str(opcion_3) == "battle-armor":
+        elif str(opcion_3) == "battle-armor":
             habilidades_0("battle-armor")
-        if str(opcion_3) == "sturdy":
+        elif str(opcion_3) == "sturdy":
             habilidades_0("sturdy")
-            
+        elif str(opcion_3) == "damp":
+            habilidades_0("damp")
+        elif str(opcion_3) == "limber":
+            habilidades_0("limber")
+        elif str(opcion_3) == "sand-veil":
+            habilidades_0("sand-veil")
+        elif str(opcion_3) == "static":
+            habilidades_0("volt-absorb")
+        elif str(opcion_3) == "water-absorb":
+            habilidades_0("water-absorb")
+        elif str(opcion_3) == "oblivious":
+            habilidades_0("oblivious")
+        elif str(opcion_3) == "intimidate":
+            habilidades_0("intimidate")
+        elif str(opcion_3) == "trace":
+            habilidades_0("trace")
+        else:
+            print('Habitat Incorrecto, elige otro por favor.')        
             
     if opc=="4":
         url_api_4 = "https://pokeapi.co/api/v2/pokemon-habitat/"
