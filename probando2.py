@@ -44,6 +44,23 @@ while True:
 
         #Quizás puedo aumentarle números al final del url hasta alcanzar el límite de la gen??
         #Del 1 al 151 son gen 1
+        
+        d = [
+                ["1ra Generación"],
+                ["2da Generación"],
+                ["3ra Generación"],
+                ["4ta Generación"],
+                ["5ta Generación"],
+                ["6ta Generacion"],
+                ["7ma Generación"],
+                ["8va Generación"],
+            ]
+     
+        print ("{:<8}".format('Generación','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1 = v
+            print ("{:<8}".format( col1))
 
         #Generación 1
         def gen_uno():
@@ -201,10 +218,25 @@ while True:
         response = requests.get(url_api)
         data = response.json()
         
-        print('Formas disponibles:')
-        print('Pichu, Unown, Burmy, Cherrym, Shellos, Gastrodon, Arceus, Deerling, Sawsbuck,')
-        print('Genesect, Vivillon, Flabebe, Floette, Florges, Furfou, Xerneas, Silvally,')
-        print('Sinistea, Polteageist, Alcremie')
+        import requests
+        d = [
+                ["Pichu          ", "Unown"],
+                ["Burmy          ", "Cherrym"],
+                ["Shellos        ", "Gastrodon"],
+                ["Arceus         ", "Deerling"],
+                ["Sawsbuck       ", "Genesect"],
+                ["Vivillon       ", "Flabebe"],
+                ["Floette        ", "Furfou"],
+                ["Xerneas        ", "Silvally"],
+                ["Sinistea       ","Polteageist"],
+                ["Alcremie       ",""],
+            ]
+     
+        print ("{:<8} {:<30}".format('Formas','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<8} {:<30}".format( col1, col2))
 
         #FORM PICHU
         def formar_pichu():
@@ -511,7 +543,7 @@ while True:
                 ["intimidate           ", "trace"]      
             ]
      
-        print ("{:<8} {:<30}".format('Habilidades','de Pokemon a Elegir'))
+        print ("{:<8} {:<30}".format('Habilidades','de Pokemon a Elegir:'))
 
         for v in d:
             col1, col2 = v
@@ -573,7 +605,7 @@ while True:
                 ["Waters-Edge   ", ""]
             ]
      
-        print ("{:<8} {:<30}".format('Habitat','de Pokemon a Elegir'))
+        print ("{:<8} {:<30}".format('Habitat','de Pokemon a Elegir:'))
 
         for v in d:
             col1, col2 = v
@@ -631,7 +663,7 @@ while True:
                 ["Shadow       ",""],
             ]
      
-        print ("{:<8} {:<30}".format('Tipos','de Pokemon a Elegir'))
+        print ("{:<8} {:<30}".format('Tipos','de Pokemon a Elegir:'))
 
         for v in d:
             col1, col2 = v
