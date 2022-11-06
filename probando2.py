@@ -44,6 +44,23 @@ while True:
 
         #Quizás puedo aumentarle números al final del url hasta alcanzar el límite de la gen??
         #Del 1 al 151 son gen 1
+        
+        d = [
+                ["1:► ","1ra Generación"],
+                ["2:► ","2da Generación"],
+                ["3:► ","3ra Generación"],
+                ["4:► ","4ta Generación"],
+                ["5:► ","5ta Generación"],
+                ["6:► ","6ta Generación"],
+                ["7:► ","7ma Generación"],
+                ["8:► ","8va Generación"],
+            ]
+     
+        print ("{:<0} {:<10}".format('Generación','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<0} {:<10}".format( col1, col2))
 
         #Generación 1
         def gen_uno():
@@ -201,10 +218,25 @@ while True:
         response = requests.get(url_api)
         data = response.json()
         
-        print('Formas disponibles:')
-        print('Pichu, Unown, Burmy, Cherrym, Shellos, Gastrodon, Arceus, Deerling, Sawsbuck,')
-        print('Genesect, Vivillon, Flabebe, Floette, Florges, Furfou, Xerneas, Silvally,')
-        print('Sinistea, Polteageist, Alcremie')
+        import requests
+        d = [
+                ["☆ Pichu          ", "☆ Unown"],
+                ["☆ Burmy          ", "☆ Cherrym"],
+                ["☆ Shellos        ", "☆ Gastrodon"],
+                ["☆ Arceus         ", "☆ Deerling"],
+                ["☆ Sawsbuck       ", "☆ Genesect"],
+                ["☆ Vivillon       ", "☆ Flabebe"],
+                ["☆ Floette        ", "☆ Furfou"],
+                ["☆ Xerneas        ", "☆ Silvally"],
+                ["☆ Sinistea       ", "☆ Polteageist"],
+                ["☆ Alcremie       ",""],
+            ]
+     
+        print ("{:<8} {:<30}".format('Formas','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<8} {:<30}".format( col1, col2))
 
         #FORM PICHU
         def formar_pichu():
@@ -450,7 +482,7 @@ while True:
                     for item in data['forms']:
                         print(data['name'], item)
 
-        opcion_2 = input('Ingresa el nombre de la forma a listar: ')
+        opcion_2 = input('Ingresa el nombre de la forma a listar: ').lower()
 
         if opcion_2.lower() == 'pichu':
             formar_pichu()
@@ -498,8 +530,25 @@ while True:
     if opc =="3":
         
         url_api_3 = "https://pokeapi.co/api/v2/ability/"
-
+        
         import requests
+
+        d = [
+                ["⭐  stench              ", "⭐ sturdy"],
+                ["⭐ drizzle              ", "⭐ damp"],
+                ["⭐ speed-boost          ", "⭐ limber"],
+                ["⭐ battle-armor         ", "⭐ sand-veil"],
+                ["⭐ static               ", "⭐ volt-absorb"],
+                ["⭐ water-absorb         ", "⭐ oblivious"],
+                ["⭐ intimidate           ", "⭐ trace"]      
+            ]
+     
+        print ("{:<8} {:<30}".format('Habilidades','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<8} {:<30}".format( col1, col2))
+
 
         def habilidades_0(ability_name):
             response = requests.get(url_api_3+ ability_name)
@@ -513,23 +562,54 @@ while True:
             for i in range(len(habilidades_pokemones)):
                 print("Pokemon: {}".format(habilidades_pokemones[i]))
 
-        opcion_3 = input('Ingresa la habilidad del pokemon a listar: ')
+        opcion_3 = input('Ingresa la habilidad del pokemon a listar: ').lower()
         if str(opcion_3) == "stench":
             habilidades_0("stench")
-        if str(opcion_3) == "drizzle":
+        elif str(opcion_3) == "drizzle":
             habilidades_0("drizzle")
-        if str(opcion_3) == "speed-boost":
+        elif str(opcion_3) == "speed-boost":
             habilidades_0("speed-boost")
-        if str(opcion_3) == "battle-armor":
+        elif str(opcion_3) == "battle-armor":
             habilidades_0("battle-armor")
-        if str(opcion_3) == "sturdy":
+        elif str(opcion_3) == "sturdy":
             habilidades_0("sturdy")
-            
+        elif str(opcion_3) == "damp":
+            habilidades_0("damp")
+        elif str(opcion_3) == "limber":
+            habilidades_0("limber")
+        elif str(opcion_3) == "sand-veil":
+            habilidades_0("sand-veil")
+        elif str(opcion_3) == "static":
+            habilidades_0("volt-absorb")
+        elif str(opcion_3) == "water-absorb":
+            habilidades_0("water-absorb")
+        elif str(opcion_3) == "oblivious":
+            habilidades_0("oblivious")
+        elif str(opcion_3) == "intimidate":
+            habilidades_0("intimidate")
+        elif str(opcion_3) == "trace":
+            habilidades_0("trace")
+        else:
+            print('Habitat Incorrecto, elige otro por favor.')        
             
     if opc=="4":
         url_api_4 = "https://pokeapi.co/api/v2/pokemon-habitat/"
 
         import requests
+        
+        d = [
+                ["🚀 Cave          ", "🚀 Forest"],
+                ["🚀 Grassland     ", "🚀 Mounstain"],
+                ["🚀 Rare          ", "🚀 Rough-Terrain"],
+                ["🚀 ea            ", "🚀 Urban"],
+                ["🚀 Waters-Edge   ", ""]
+            ]
+     
+        print ("{:<8} {:<30}".format('Habitat','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<8} {:<30}".format( col1, col2))
 
 
         def habitat(habitat_name):
@@ -544,7 +624,7 @@ while True:
             for i in range(len(lista_pokemones)):
                 print("pokemon: {}".format(lista_pokemones[i]))
     
-        opcion_4 = input('Ingresa el nombre del Habitat a listar: ')
+        opcion_4 = input('Ingresa el nombre del Habitat a listar: ').lower()
         if str(opcion_4) == "cave":
             habitat("cave")
         elif str(opcion_4) == "forest":
@@ -570,6 +650,24 @@ while True:
         url_api_5 = "https://pokeapi.co/api/v2/type/"
 
         import requests
+        d = [
+                ["🧬 Normal       ", "🧬 Fighting"],
+                ["🧬 Poison       ", "🧬 Ground"],
+                ["🧬 Rock         ", "🧬 Bug"],
+                ["🧬 Ghost        ", "🧬 Steel"],
+                ["🧬 Fire         ", "🧬 Water"],
+                ["🧬 Grass        ", "🧬 Electric"],
+                ["🧬 Psychic      ", "🧬 Ice"],
+                ["🧬 Dragon       ", "🧬 Dark"],
+                ["🧬 Fairy        ", "🧬 Unknown"],
+                ["🧬 Shadow       ",""],
+            ]
+     
+        print ("{:<8} {:<30}".format('Tipos','de Pokemon a Elegir:'))
+
+        for v in d:
+            col1, col2 = v
+            print ("{:<8} {:<30}".format( col1, col2))
 
 
         def type_0(type_name):
@@ -585,7 +683,7 @@ while True:
                 print("Pokemon: {}".format(type_pokemones[i]))
                 
                     
-        opcion_5 = input('Ingresa el tipo del pokemon a listar: ')
+        opcion_5 = input('Ingresa el tipo del pokemon a listar: ').lower()
         if str(opcion_5) == "normal":
             type_0("normal")
         elif str(opcion_5) == "fighting":

@@ -15,6 +15,7 @@ def type_0(type_name):
     for i in range(len(type_pokemones)):
         print("Pokemon: {}".format(type_pokemones[i]))
         
+    
               
 opcion_5 = input('Ingresa el tipo del pokemon a listar: ')
 if str(opcion_5) == "normal":
