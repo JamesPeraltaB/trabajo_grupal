@@ -228,7 +228,7 @@ while True:
                 ["☆ Vivillon       ", "☆ Flabebe"],
                 ["☆ Floette        ", "☆ Furfou"],
                 ["☆ Xerneas        ", "☆ Silvally"],
-                ["☆ Sinistea       ","☆ Polteageist"],
+                ["☆ Sinistea       ", "☆ Polteageist"],
                 ["☆ Alcremie       ",""],
             ]
      
@@ -534,13 +534,13 @@ while True:
         import requests
 
         d = [
-                ["✵ stench               ", "✵ sturdy"],
-                ["✵ drizzle              ", "✵ damp"],
-                ["✵ speed-boost          ", "✵ limber"],
-                ["✵ battle-armor         ", "✵ sand-veil"],
-                ["✵ static               ", "✵ volt-absorb"],
-                ["✵ water-absorb         ", "✵ oblivious"],
-                ["✵ intimidate           ", "✵ trace"]      
+                ["⭐  stench              ", "⭐ sturdy"],
+                ["⭐ drizzle              ", "⭐ damp"],
+                ["⭐ speed-boost          ", "⭐ limber"],
+                ["⭐ battle-armor         ", "⭐ sand-veil"],
+                ["⭐ static               ", "⭐ volt-absorb"],
+                ["⭐ water-absorb         ", "⭐ oblivious"],
+                ["⭐ intimidate           ", "⭐ trace"]      
             ]
      
         print ("{:<8} {:<30}".format('Habilidades','de Pokemon a Elegir:'))
