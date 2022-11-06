@@ -46,21 +46,21 @@ while True:
         #Del 1 al 151 son gen 1
         
         d = [
-                ["1ra Generación"],
-                ["2da Generación"],
-                ["3ra Generación"],
-                ["4ta Generación"],
-                ["5ta Generación"],
-                ["6ta Generacion"],
-                ["7ma Generación"],
-                ["8va Generación"],
+                ["1:► ","1ra Generación"],
+                ["2:► ","2da Generación"],
+                ["3:► ","3ra Generación"],
+                ["4:► ","4ta Generación"],
+                ["5:► ","5ta Generación"],
+                ["6:► ","6ta Generación"],
+                ["7:► ","7ma Generación"],
+                ["8:► ","8va Generación"],
             ]
      
-        print ("{:<8}".format('Generación','de Pokemon a Elegir:'))
+        print ("{:<0} {:<10}".format('Generación','de Pokemon a Elegir:'))
 
         for v in d:
-            col1 = v
-            print ("{:<8}".format( col1))
+            col1, col2 = v
+            print ("{:<0} {:<10}".format( col1, col2))
 
         #Generación 1
         def gen_uno():
@@ -220,16 +220,16 @@ while True:
         
         import requests
         d = [
-                ["Pichu          ", "Unown"],
-                ["Burmy          ", "Cherrym"],
-                ["Shellos        ", "Gastrodon"],
-                ["Arceus         ", "Deerling"],
-                ["Sawsbuck       ", "Genesect"],
-                ["Vivillon       ", "Flabebe"],
-                ["Floette        ", "Furfou"],
-                ["Xerneas        ", "Silvally"],
-                ["Sinistea       ","Polteageist"],
-                ["Alcremie       ",""],
+                ["☆ Pichu          ", "☆ Unown"],
+                ["☆ Burmy          ", "☆ Cherrym"],
+                ["☆ Shellos        ", "☆ Gastrodon"],
+                ["☆ Arceus         ", "☆ Deerling"],
+                ["☆ Sawsbuck       ", "☆ Genesect"],
+                ["☆ Vivillon       ", "☆ Flabebe"],
+                ["☆ Floette        ", "☆ Furfou"],
+                ["☆ Xerneas        ", "☆ Silvally"],
+                ["☆ Sinistea       ","☆ Polteageist"],
+                ["☆ Alcremie       ",""],
             ]
      
         print ("{:<8} {:<30}".format('Formas','de Pokemon a Elegir:'))
@@ -534,13 +534,13 @@ while True:
         import requests
 
         d = [
-                ["stench               ", "sturdy"],
-                ["drizzle              ", "damp"],
-                ["speed-boost          ", "limber"],
-                ["battle-armor         ", "sand-veil"],
-                ["static               ", "volt-absorb"],
-                ["water-absorb         ", "oblivious"],
-                ["intimidate           ", "trace"]      
+                ["✵ stench               ", "✵ sturdy"],
+                ["✵ drizzle              ", "✵ damp"],
+                ["✵ speed-boost          ", "✵ limber"],
+                ["✵ battle-armor         ", "✵ sand-veil"],
+                ["✵ static               ", "✵ volt-absorb"],
+                ["✵ water-absorb         ", "✵ oblivious"],
+                ["✵ intimidate           ", "✵ trace"]      
             ]
      
         print ("{:<8} {:<30}".format('Habilidades','de Pokemon a Elegir:'))
@@ -598,11 +598,11 @@ while True:
         import requests
         
         d = [
-                ["Cave          ", "Forest"],
-                ["Grassland     ", "Mounstain"],
-                ["Rare          ", "Rough-Terrain"],
-                ["Sea           ", "Urban"],
-                ["Waters-Edge   ", ""]
+                ["🚀 Cave          ", "🚀 Forest"],
+                ["🚀 Grassland     ", "🚀 Mounstain"],
+                ["🚀 Rare          ", "🚀 Rough-Terrain"],
+                ["🚀 ea            ", "🚀 Urban"],
+                ["🚀 Waters-Edge   ", ""]
             ]
      
         print ("{:<8} {:<30}".format('Habitat','de Pokemon a Elegir:'))
@@ -651,16 +651,16 @@ while True:
 
         import requests
         d = [
-                ["Normal       ", "Fighting"],
-                ["Poison       ", "Ground"],
-                ["Rock         ", "Bug"],
-                ["Ghost        ", "Steel"],
-                ["Fire         ", "Water"],
-                ["Grass        ", "Electric"],
-                ["Psychic      ", "Ice"],
-                ["Dragon       ", "Dark"],
-                ["Fairy        ","Unknown"],
-                ["Shadow       ",""],
+                ["🧬 Normal       ", "🧬 Fighting"],
+                ["🧬 Poison       ", "🧬 Ground"],
+                ["🧬 Rock         ", "🧬 Bug"],
+                ["🧬 Ghost        ", "🧬 Steel"],
+                ["🧬 Fire         ", "🧬 Water"],
+                ["🧬 Grass        ", "🧬 Electric"],
+                ["🧬 Psychic      ", "🧬 Ice"],
+                ["🧬 Dragon       ", "🧬 Dark"],
+                ["🧬 Fairy        ", "🧬 Unknown"],
+                ["🧬 Shadow       ",""],
             ]
      
         print ("{:<8} {:<30}".format('Tipos','de Pokemon a Elegir:'))
