@@ -1,4 +1,7 @@
+import time
+
 nombre=str(input("Pokemaniatico ingresa tu nombre para empezar: "))
+
 
 print("""
     _.----.        ____         ,'  _\   ___    ___     ____
@@ -13,6 +16,8 @@ _,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.
         \_.-'       |__|    `-._ |              '-.|     '-.| |   |
                                 `'                            '-._|
       """)
+
+time.sleep(2)
 print("                 ☆☆☆☆☆☆☆☆☆PokeMenu Interactivo☆☆☆☆☆☆☆☆☆")
 print("                             Bienvenido "+nombre+"!!")
 while True:
@@ -33,6 +38,8 @@ while True:
         ░░░▀▄▄▀▀▄▄▀▀▄▄▄█▀                                                          
     """)
     opc = input("Para continuar ingresa una opcion: ")
+    
+    time.sleep(1)
     
     if opc =="1":
         
@@ -57,6 +64,8 @@ while True:
             ]
      
         print ("{:<0} {:<10}".format('Generación','de Pokemon a Elegir:'))
+        
+
 
         for v in d:
             col1, col2 = v
@@ -209,6 +218,8 @@ while True:
             gen_ocho()
         else:
             print('Opción incorrecta.')
+            
+    time.sleep(3)
             
     if opc=="2":
         
@@ -526,6 +537,8 @@ while True:
             formar_alcremie()
         else:
             print('Opción incorrecta.')
+    
+    time.sleep(3)
   
     if opc =="3":
         
@@ -534,7 +547,7 @@ while True:
         import requests
 
         d = [
-                ["⭐  stench              ", "⭐ sturdy"],
+                ["⭐ stench              ", "⭐ sturdy"],
                 ["⭐ drizzle              ", "⭐ damp"],
                 ["⭐ speed-boost          ", "⭐ limber"],
                 ["⭐ battle-armor         ", "⭐ sand-veil"],
@@ -590,7 +603,9 @@ while True:
         elif str(opcion_3) == "trace":
             habilidades_0("trace")
         else:
-            print('Habitat Incorrecto, elige otro por favor.')        
+            print('Habitat Incorrecto, elige otro por favor.')    
+    
+    time.sleep(3)    
             
     if opc=="4":
         url_api_4 = "https://pokeapi.co/api/v2/pokemon-habitat/"
@@ -645,6 +660,8 @@ while True:
             habitat("waters-edge")
         else:
             print('Habitat Incorrecto, elige otro por favor.')
+    
+    time.sleep(3)
     
     if opc =="5":
         url_api_5 = "https://pokeapi.co/api/v2/type/"
@@ -726,3 +743,5 @@ while True:
             type_0("shadow")
         else:
             print('Tipo Incorrecto, elige otro por favor.')
+    
+    time.sleep(3)
